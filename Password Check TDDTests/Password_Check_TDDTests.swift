@@ -10,8 +10,11 @@ import XCTest
 
 final class Password_Check_TDDTests: XCTestCase {
 
-    func testExample() throws {
+//1. The password must be at least 8 characters long. If it is not met, then the following error message should be returned: “Password must be at least 8 characters”
+    func testPasswordTooShort() {
+        let vm = ViewModel()
         
+        XCTAssertEqual(vm.newPasswordCheck("test"), "Password must be at least 8 characters")
     }
 
 
