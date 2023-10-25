@@ -33,22 +33,23 @@ struct ViewModel {
         var containsCapitalLetter = false
         var containtsSpecialChar = false
         
-        for digit in 0...9 {
-            if password.contains(String(digit)){ digitCounter += 1
+        password.forEach { Character in
+            if Character.isNumber {
+                digitCounter += 1
             }
-        }
+        }   //digit check
         password.forEach { Character in
             if Character.isUppercase {
                 containsCapitalLetter.toggle()
                 return
             }
-        }
+        }   //capital letter check
         password.forEach { Character in
             if Character.isSymbol {
                 containtsSpecialChar.toggle()
                 return
             }
-        }
+        }   //special char check
         
         password.count<8 ? checkFails.append("Password must be at least 8 characters") : nil
         digitCounter<2 ? checkFails.append("The password must contain at least 2 numbers") : nil
@@ -56,6 +57,5 @@ struct ViewModel {
         containtsSpecialChar == false ? checkFails.append("password must contain at least one special character") : nil
         
         return checkFails.joined(separator: "\n")
-
     }
 }
