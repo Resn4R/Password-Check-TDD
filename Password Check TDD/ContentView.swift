@@ -4,11 +4,9 @@
 //
 //  Created by Vito Borghi on 25/10/2023.
 //
-import SwiftData
 import SwiftUI
 
 struct ContentView: View {
-    //@Query var database: [User]
     
     private let viewModel = ViewModel()
     
@@ -30,7 +28,7 @@ struct ContentView: View {
                     SecureField("Password: ", text: $password)
                     Button("Login"){
                         let user = User(username: username, password: password)
-                        viewModel.userValidation(for: user)
+                        if viewModel.userValidation(for: user) { print("user: \(user.username) succesfully logged in.") }
                     }
                     .buttonStyle(.borderedProminent)
                     .padding(.vertical, 30)

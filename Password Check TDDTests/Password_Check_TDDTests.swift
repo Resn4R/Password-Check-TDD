@@ -16,6 +16,9 @@ final class Password_Check_TDDTests: XCTestCase {
         
         XCTAssertEqual(vm.newPasswordCheck("test"), "Password must be at least 8 characters")
     }
-
-
+    func testPasswordLongEnough() {
+        let vm = ViewModel()
+        
+        XCTAssertEqual(vm.newPasswordCheck("thistestshouldpass"), "password is valid")
+    }
 }

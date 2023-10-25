@@ -5,7 +5,6 @@
 //  Created by Vito Borghi on 25/10/2023.
 //
 
-import SwiftData
 import Foundation
 
 struct ViewModel {    
@@ -33,7 +32,7 @@ struct ViewModel {
         if password.count < 8 {
             return "Password must be at least 8 characters"
         }
-        return "valid"
+        return "password is valid"
     }
     
 }

@@ -7,7 +7,7 @@
 import SwiftData
 import Foundation
 
-@Model
+//@Model
 class User {
     let username: String
     let password: String
