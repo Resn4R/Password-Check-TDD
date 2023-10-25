@@ -4,7 +4,7 @@
 //
 //  Created by Vito Borghi on 25/10/2023.
 //
-
+import SwiftData
 import SwiftUI
 
 @main
@@ -13,5 +13,6 @@ struct Password_Check_TDDApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: User.self)
     }
 }

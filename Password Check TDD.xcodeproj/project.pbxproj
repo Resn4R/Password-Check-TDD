@@ -15,6 +15,8 @@
 		4FC756072AE91B2100D7575C /* Password_Check_TDDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC756062AE91B2100D7575C /* Password_Check_TDDUITests.swift */; };
 		4FC756092AE91B2100D7575C /* Password_Check_TDDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC756082AE91B2100D7575C /* Password_Check_TDDUITestsLaunchTests.swift */; };
 		4FC756162AE91D4200D7575C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC756152AE91D4200D7575C /* User.swift */; };
+		4FC756182AE9200200D7575C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC756172AE9200200D7575C /* ViewModel.swift */; };
+		4FC7561A2AE923D500D7575C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC756192AE923D500D7575C /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		4FC756062AE91B2100D7575C /* Password_Check_TDDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_Check_TDDUITests.swift; sourceTree = "<group>"; };
 		4FC756082AE91B2100D7575C /* Password_Check_TDDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_Check_TDDUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4FC756152AE91D4200D7575C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4FC756172AE9200200D7575C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4FC756192AE923D500D7575C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			children = (
 				4FC755EB2AE91B2000D7575C /* Password_Check_TDDApp.swift */,
 				4FC755ED2AE91B2000D7575C /* ContentView.swift */,
+				4FC756192AE923D500D7575C /* SignUpView.swift */,
+				4FC756172AE9200200D7575C /* ViewModel.swift */,
 				4FC756152AE91D4200D7575C /* User.swift */,
 				4FC755EF2AE91B2100D7575C /* Assets.xcassets */,
 				4FC755F12AE91B2100D7575C /* Preview Content */,
@@ -261,6 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC755EE2AE91B2000D7575C /* ContentView.swift in Sources */,
+				4FC7561A2AE923D500D7575C /* SignUpView.swift in Sources */,
+				4FC756182AE9200200D7575C /* ViewModel.swift in Sources */,
 				4FC755EC2AE91B2000D7575C /* Password_Check_TDDApp.swift in Sources */,
 				4FC756162AE91D4200D7575C /* User.swift in Sources */,
 			);
