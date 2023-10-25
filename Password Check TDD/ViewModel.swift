@@ -28,17 +28,18 @@ struct ViewModel {
         return true
     }
     func newPasswordCheck(_ password: String) -> String {
-        if password.count>=8 {
-            var digitCounter = 0
-            
-            for digit in 0...9 {
-                if password.contains(String(digit)){ digitCounter += 1
-                }
+        var checkFails = [String]()
+        var digitCounter = 0
+        
+        for digit in 0...9 {
+            if password.contains(String(digit)){ digitCounter += 1
             }
-            if digitCounter>=2 {
-                
-            } else { return "The password must contain at least 2 numbers" }
-        } else { return "Password must be at least 8 characters" }
-        return "password is valid"
+        }
+        
+        password.count<8 ? checkFails.append("Password must be at least 8 characters") : nil
+        digitCounter<2 ? checkFails.append("The password must contain at least 2 numbers") : nil
+        
+        return checkFails.joined(separator: "\n")
+
     }
 }
