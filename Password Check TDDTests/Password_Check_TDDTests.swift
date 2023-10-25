@@ -38,4 +38,11 @@ final class Password_Check_TDDTests: XCTestCase {
         
         XCTAssertEqual(vm.newPasswordCheck("failthetestbecausenocapitalletters123123"), "password must contain at least one capital letter")
     }
+    
+    //5. The password must contain at least one special character. If it is not met, then the following error message should be returned: “password must contain at least one special character”
+    func testPasswordDoesNotContainSpecialChar(){
+        let vm = ViewModel()
+        
+        XCTAssertEqual(vm.newPasswordCheck("teteteteetetteetetetetetette123123123123ASD"), "password must contain at least one special character")
+    }
 }
