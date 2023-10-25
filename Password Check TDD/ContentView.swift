@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     //@Query var database: [User]
     
-    private var viewModel = ViewModel()
+    private let viewModel = ViewModel()
     
     @State private var username = ""
     @State private var password = ""

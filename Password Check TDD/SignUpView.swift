@@ -10,6 +10,8 @@ import SwiftUI
 struct SignUpView: View {
     //@Query var database: [User]
     @Environment(\.dismiss) var dismissView
+    private let viewModel = ViewModel()
+
     @State private var username = ""
     @State private var password = ""
     @State private var passwordDoubleCheck = ""
@@ -17,9 +19,10 @@ struct SignUpView: View {
     var body: some View {
         NavigationStack{
             Form {
-                VStack(spacing: 5) {
+                VStack {
                     HStack{
                         Text("Insert your username: ")
+                        Spacer()
                         TextField("Username", text: $username)
                     }
                     HStack{
@@ -39,7 +42,9 @@ struct SignUpView: View {
                 }
             }
             
-            Button("Create Account", action: ViewModel.createAccount(<#T##self: ViewModel##ViewModel#>))
+            Button("Create Account"){
+                viewModel.createAccount(username: username, password: password)
+            }
             
             .navigationTitle("Sign Up")
         }
