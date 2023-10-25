@@ -30,14 +30,23 @@ struct ViewModel {
     func newPasswordCheck(_ password: String) -> String {
         var checkFails = [String]()
         var digitCounter = 0
+        var containsCapitalLetter = false
         
         for digit in 0...9 {
             if password.contains(String(digit)){ digitCounter += 1
             }
         }
         
+        password.forEach { Character in
+            if Character.isUppercase {
+                containsCapitalLetter.toggle()
+                return
+            }
+        }
+        
         password.count<8 ? checkFails.append("Password must be at least 8 characters") : nil
         digitCounter<2 ? checkFails.append("The password must contain at least 2 numbers") : nil
+        containsCapitalLetter == false ? checkFails.append("password must contain at least one capital letter") : nil
         
         return checkFails.joined(separator: "\n")
 
