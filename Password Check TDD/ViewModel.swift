@@ -28,11 +28,6 @@ struct ViewModel {
         return true
     }
     func newPasswordCheck(_ password: String) -> String {
-        //password validation for TDD
-        if password.count < 8 {
-            return "Password must be at least 8 characters"
-        }
-        return "password is valid"
+        password.count<8 ? "Password must be at least 8 characters" : "password is valid"
     }
-    
 }
