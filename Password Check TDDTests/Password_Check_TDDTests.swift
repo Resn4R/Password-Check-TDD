@@ -14,14 +14,14 @@ final class Password_Check_TDDTests: XCTestCase {
     func testPasswordTooShort() {
         let vm = ViewModel()
         
-        XCTAssertEqual(vm.newPasswordCheck("test"), "Password must be at least 8 characters")
+        XCTAssertEqual(vm.newPasswordCheck("test"), "Password must be at least 8 characters\nThe password must contain at least 2 numbers\npassword must contain at least one capital letter\npassword must contain at least one special character")
     }
     
     //2. The password must contain at least 2 numbers. If it is not met, then the following error message should be returned: “The password must contain at least 2 numbers”
     func testContainsNumbers() {
         let vm = ViewModel()
         
-        XCTAssertEqual(vm.newPasswordCheck("test2test"), "The password must contain at least 2 numbers")
+        XCTAssertEqual(vm.newPasswordCheck("test2test"), "The password must contain at least 2 numbers\npassword must contain at least one capital letter\npassword must contain at least one special character")
     }
     
     //3. The validation function should handle multiple validation errors.
@@ -29,14 +29,14 @@ final class Password_Check_TDDTests: XCTestCase {
     func testPasswordInvalidForMultipleReasons() {
         let vm = ViewModel()
         
-        XCTAssertEqual(vm.newPasswordCheck("somepassword"), "Password must be at least 8 characters\nThe password must contain at least 2 numbers")
+        XCTAssertEqual(vm.newPasswordCheck("somepassword"), "The password must contain at least 2 numbers\npassword must contain at least one capital letter\npassword must contain at least one special character")
     }
     
     //4. The password must contain at least one capital letter. If it is not met, then the following error message should be returned: “password must contain at least one capital letter”
     func testPasswordDoesNotContainCapitalLetter() {
         let vm = ViewModel()
         
-        XCTAssertEqual(vm.newPasswordCheck("failthetestbecausenocapitalletters123123"), "password must contain at least one capital letter")
+        XCTAssertEqual(vm.newPasswordCheck("failthetestbecausenocapitalletters123123"), "password must contain at least one capital letter\npassword must contain at least one special character")
     }
     
     //5. The password must contain at least one special character. If it is not met, then the following error message should be returned: “password must contain at least one special character”
